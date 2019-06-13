@@ -1,0 +1,196 @@
+Release 14.7 par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+LAB016-01::  Tue Jun 11 13:00:53 2019
+
+par -w -intstyle ise -ol high -t 1 magneto_v1_map.ncd magneto_v1.ncd
+magneto_v1.pcf 
+
+
+Constraints file: magneto_v1.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "magneto_v1" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.27 2013-10-13".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          18 out of 232     7%
+
+   Number of External Input IOBs                  6
+
+      Number of External Input IBUFs              6
+        Number of LOCed External Input IBUFs      6 out of 6     100%
+
+
+   Number of External Output IOBs                10
+
+      Number of External Output IOBs             10
+        Number of LOCed External Output IOBs     10 out of 10    100%
+
+
+   Number of External Bidir IOBs                  2
+
+      Number of External Bidir IOBs               2
+        Number of LOCed External Bidir IOBs       2 out of 2     100%
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of Slices                        302 out of 4656    6%
+      Number of SLICEMs                     20 out of 2328    1%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 31 secs 
+Finished initial Timing Analysis.  REAL time: 31 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 31 secs 
+Total CPU  time at the beginning of Placer: 1 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:d1bb79bd) REAL time: 31 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:d1bb79bd) REAL time: 31 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:d1bb79bd) REAL time: 31 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:1ac165fd) REAL time: 34 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:1ac165fd) REAL time: 34 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:1ac165fd) REAL time: 34 secs 
+
+Phase 7.8  Global Placement
+...............
+......................
+Phase 7.8  Global Placement (Checksum:b9a26bfd) REAL time: 34 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:b9a26bfd) REAL time: 34 secs 
+
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:1447398b) REAL time: 34 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:1447398b) REAL time: 34 secs 
+
+Total REAL time to Placer completion: 34 secs 
+Total CPU  time to Placer completion: 4 secs 
+Writing design to file magneto_v1.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 1898 unrouted;      REAL time: 39 secs 
+
+Phase  2  : 1690 unrouted;      REAL time: 39 secs 
+
+Phase  3  : 292 unrouted;      REAL time: 39 secs 
+
+Phase  4  : 292 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Updating file: magneto_v1.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Total REAL time to Router completion: 40 secs 
+Total CPU time to Router completion: 10 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           CLK_BUFGP | BUFGMUX_X1Y11| No   |  195 |  0.085     |  0.202      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH | SETUP       |    10.768ns|     9.232ns|       0|           0
+   50%                                      | HOLD        |     0.915ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 41 secs 
+Total CPU time to PAR completion: 11 secs 
+
+Peak Memory Usage:  246 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file magneto_v1.ncd
+
+
+
+PAR done!

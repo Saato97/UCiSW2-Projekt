@@ -1,0 +1,4 @@
+vhdl work "Magneto_Comp.vhd"
+vhdl work "I2C_Master.vhd"
+vhdl work "MagnetoHMC5883L.vhf"
+vhdl work "magneto_v1.vhf"

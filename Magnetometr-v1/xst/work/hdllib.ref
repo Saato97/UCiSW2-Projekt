@@ -1,0 +1,14 @@
+AR magnetohmc5883l_muser_magneto_v1 behavioral C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl09 1560247222
+EN ftrse_mxilinx_magneto_v1 NULL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl04 1560247217
+AR magnetohmc5883l behavioral C:/Users/lab/Magnetometr-v1/MagnetoHMC5883L.vhf sub00/vhpl13 1560247226
+AR i2c_master structure C:/Users/lab/Magnetometr-v1/I2C_Master.vhd sub00/vhpl01 1560247214
+EN magneto_v1 NULL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl10 1560247223
+EN i2c_master NULL C:/Users/lab/Magnetometr-v1/I2C_Master.vhd sub00/vhpl00 1560247213
+AR magneto_v1 behavioral C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl11 1560247224
+EN magnetohmc5883l NULL C:/Users/lab/Magnetometr-v1/MagnetoHMC5883L.vhf sub00/vhpl12 1560247225
+EN cb16re_mxilinx_magneto_v1 NULL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl06 1560247219
+AR ftrse_mxilinx_magneto_v1 behavioral C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl05 1560247218
+AR cb16re_mxilinx_magneto_v1 behavioral C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl07 1560247220
+EN magneto_comp NULL C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd sub00/vhpl02 1560247215
+EN magnetohmc5883l_muser_magneto_v1 NULL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf sub00/vhpl08 1560247221
+AR magneto_comp behavioral C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd sub00/vhpl03 1560247216

@@ -1,0 +1,49 @@
+V3 55
+FL C:/Users/lab/Magnetometr-v1/I2C_Master.vhd 2019/06/09.05:46:24 P.20131013
+EN work/I2C_Master 1560247213 FL C:/Users/lab/Magnetometr-v1/I2C_Master.vhd \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/I2C_Master/STRUCTURE 1560247214 \
+      FL C:/Users/lab/Magnetometr-v1/I2C_Master.vhd EN work/I2C_Master 1560247213 \
+      CP GND CP VCC CP FDE CP FDRE CP FDR CP MUXCY CP XORCY CP IOBUF CP FDS CP RAM16X1D \
+      CP LUT2 CP LUT3 CP LUT4 CP FDRS CP LUT1 CP MUXF5 CP INV CP LUT4_D CP LUT2_L \
+      CP LUT3_L CP LUT4_L CP LUT3_D CP LUT2_D
+FL C:/Users/lab/Magnetometr-v1/MagnetoHMC5883L.vhf 2019/06/11.11:54:53 P.20131013
+EN work/MagnetoHMC5883L 1560247225 \
+      FL C:/Users/lab/Magnetometr-v1/MagnetoHMC5883L.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/MagnetoHMC5883L/BEHAVIORAL 1560247226 \
+      FL C:/Users/lab/Magnetometr-v1/MagnetoHMC5883L.vhf EN work/MagnetoHMC5883L 1560247225 \
+      CP I2C_Master CP Magneto_Comp
+FL C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd 2019/06/09.18:15:36 P.20131013
+EN work/Magneto_Comp 1560247215 FL C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Magneto_Comp/Behavioral 1560247216 \
+      FL C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd EN work/Magneto_Comp 1560247215
+FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf 2019/06/11.13:00:10 P.20131013
+EN work/FTRSE_MXILINX_magneto_v1 1560247217 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/FTRSE_MXILINX_magneto_v1/BEHAVIORAL 1560247218 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf \
+      EN work/FTRSE_MXILINX_magneto_v1 1560247217 CP XOR2 CP FDRE CP OR2
+EN work/CB16RE_MXILINX_magneto_v1 1560247219 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/CB16RE_MXILINX_magneto_v1/BEHAVIORAL 1560247220 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf \
+      EN work/CB16RE_MXILINX_magneto_v1 1560247219 CP FTRSE_MXILINX_magneto_v1 \
+      CP GND CP AND5 CP AND2 CP AND3 CP AND4 CP VCC
+EN work/MagnetoHMC5883L_MUSER_magneto_v1 1560247221 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/MagnetoHMC5883L_MUSER_magneto_v1/BEHAVIORAL 1560247222 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf \
+      EN work/MagnetoHMC5883L_MUSER_magneto_v1 1560247221 CP I2C_Master \
+      CP Magneto_Comp
+EN work/magneto_v1 1560247223 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/magneto_v1/BEHAVIORAL 1560247224 \
+      FL C:/Users/lab/Magnetometr-v1/magneto_v1.vhf EN work/magneto_v1 1560247223 \
+      CP BUF CP INV CP LCD2x64 CP MagnetoHMC5883L_MUSER_magneto_v1 \
+      CP CB16RE_MXILINX_magneto_v1 CP GND

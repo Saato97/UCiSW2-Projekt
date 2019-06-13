@@ -1,0 +1,4 @@
+vhdl work "C:\Users\lab\Magnetometr-v1\Magneto_Comp.vhd"
+vhdl work "C:\Users\lab\Magnetometr-v1\I2C_Master.vhd"
+vhdl work "C:\Users\lab\Magnetometr-v1\MagnetoHMC5883L.vhf"
+vhdl work "C:\Users\lab\Magnetometr-v1\magneto_v1.vhf"

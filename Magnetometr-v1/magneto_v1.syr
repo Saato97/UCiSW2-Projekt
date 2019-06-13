@@ -1,0 +1,816 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: magneto_v1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "magneto_v1.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "magneto_v1"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : magneto_v1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Magnetometr-v1/I2C_Master.vhd" in Library work.
+Architecture structure of Entity i2c_master is up to date.
+Compiling vhdl file "C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd" in Library work.
+Architecture behavioral of Entity magneto_comp is up to date.
+Compiling vhdl file "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf" in Library work.
+Entity <ftrse_mxilinx_magneto_v1> compiled.
+Entity <ftrse_mxilinx_magneto_v1> (Architecture <behavioral>) compiled.
+Entity <cb16re_mxilinx_magneto_v1> compiled.
+Entity <cb16re_mxilinx_magneto_v1> (Architecture <behavioral>) compiled.
+Entity <magnetohmc5883l_muser_magneto_v1> compiled.
+Entity <magnetohmc5883l_muser_magneto_v1> (Architecture <behavioral>) compiled.
+Entity <magneto_v1> compiled.
+Entity <magneto_v1> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Magnetometr-v1/MagnetoHMC5883L.vhf" in Library work.
+Architecture behavioral of Entity magnetohmc5883l is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <magneto_v1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MagnetoHMC5883L_MUSER_magneto_v1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CB16RE_MXILINX_magneto_v1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <I2C_Master> in library <work> (architecture <structure>).
+
+Analyzing hierarchy for entity <Magneto_Comp> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FTRSE_MXILINX_magneto_v1> in library <work> (architecture <behavioral>) with generics.
+	INIT = '0'
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <magneto_v1> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf" line 673: Instantiating black box module <LCD2x64>.
+WARNING:Xst:753 - "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf" line 686: Unconnected output port 'ID' of component 'MagnetoHMC5883L_MUSER_magneto_v1'.
+WARNING:Xst:753 - "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf" line 700: Unconnected output port 'CEO' of component 'CB16RE_MXILINX_magneto_v1'.
+WARNING:Xst:753 - "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf" line 700: Unconnected output port 'TC' of component 'CB16RE_MXILINX_magneto_v1'.
+    Set user-defined property "HU_SET =  XLXI_23_16" for instance <XLXI_23> in unit <magneto_v1>.
+Entity <magneto_v1> analyzed. Unit <magneto_v1> generated.
+
+Analyzing Entity <MagnetoHMC5883L_MUSER_magneto_v1> in library <work> (Architecture <behavioral>).
+Entity <MagnetoHMC5883L_MUSER_magneto_v1> analyzed. Unit <MagnetoHMC5883L_MUSER_magneto_v1> generated.
+
+Analyzing Entity <I2C_Master> in library <work> (Architecture <structure>).
+    Set user-defined property "INIT =  0" for instance <RdNotWr> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <NACK_12> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_3> in unit <I2C_Master>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "DRIVE =  12" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "SLEW =  20" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "DRIVE =  12" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "SLEW =  20" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <state_FSM_FFd6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM8> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_iFull> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <i_FIFO_iEmpty> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6" for instance <Mcount_cntBits_xor_1_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6A" for instance <Mcount_cntBits_xor_2_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6AAA" for instance <Mcount_cntBits_xor_3_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8" for instance <RdNotWr_and00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EB41" for instance <Mcount_cntBytes_xor_1_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0080" for instance <NACK_and00007> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FE54" for instance <sregOut_mux0000_0_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFBF" for instance <SCLout_mux00008> in unit <I2C_Master>.
+    Set user-defined property "INIT =  7" for instance <SCLout_mux000017> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFB" for instance <SCLout_mux000021> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C040" for instance <SCLout_mux000061> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0080" for instance <sregIn_and00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8" for instance <SDAout_mux0003426> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8F88" for instance <state_FSM_FFd4_In1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EA" for instance <state_FSM_FFd2_In2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  08" for instance <state_FSM_FFd2_In12> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2232" for instance <state_FSM_FFd2_In26> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0080" for instance <SDAout_mux00038> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <SDAout_mux000316> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FF10" for instance <SDAout_mux000325> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F888" for instance <SDAout_mux0003431> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFE" for instance <SDAout_mux000393> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F7FF" for instance <SDAout_mux0003112> in unit <I2C_Master>.
+    Set user-defined property "INIT =  E" for instance <SDAout_mux0003139> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFD8" for instance <SDAout_mux0003180> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6" for instance <i_FIFO_Result_1_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6" for instance <i_FIFO_Result_1_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F7FF" for instance <cntBytes_not0001_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F2F0" for instance <cntBytes_not0001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FA8A" for instance <state_FSM_FFd3_In> in unit <I2C_Master>.
+    Set user-defined property "INIT =  A888" for instance <state_FSM_FFd1_In_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <state_FSM_FFd1_In> in unit <I2C_Master>.
+    Set user-defined property "INIT =  E" for instance <cntSCL_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  BA" for instance <cntBits_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFD" for instance <sregOut_not000111> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FEAE" for instance <sregOut_not0001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  90" for instance <i_FIFO_iFull_and000076> in unit <I2C_Master>.
+    Set user-defined property "INIT =  80" for instance <i_FIFO_iFull_and000096> in unit <I2C_Master>.
+    Set user-defined property "INIT =  3237" for instance <i_FIFO_DoPop> in unit <I2C_Master>.
+    Set user-defined property "INIT =  5444" for instance <i_FIFO_DoPush40> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <SCLout> in unit <I2C_Master>.
+    Set user-defined property "INIT =  A8" for instance <SCLout_mux0000721> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <SDAout> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_1_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_2_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_3_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_4_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_5_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_6_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_xor_7_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <i_FIFO_DoPop_SW2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  ABFB" for instance <i_FIFO_iFull_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B" for instance <SDAout_mux000332_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0020" for instance <sclEnd_cmp_eq00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  ECA0" for instance <SDAout_mux00032041> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0040" for instance <i_FIFO_DoPush13> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFBF" for instance <sclEnd_cmp_eq00001_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2148" for instance <i_FIFO_iFull_and000071> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6AAA" for instance <i_FIFO_Result_3_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6AAA" for instance <i_FIFO_Result_3_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  69C3" for instance <i_FIFO_iEmpty_and000058> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8000" for instance <sregOut_not0001_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  69" for instance <i_FIFO_iEmpty_and000067> in unit <I2C_Master>.
+    Set user-defined property "INIT =  AE" for instance <i_FIFO_DoPush40_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  D" for instance <i_FIFO_DoPush40_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B8F0" for instance <i_FIFO_iEmpty_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FF01" for instance <SDAout_mux0003157_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  028A" for instance <i_FIFO_iEmpty_and0000102> in unit <I2C_Master>.
+    Set user-defined property "INIT =  69C3" for instance <i_FIFO_iFull_and000048> in unit <I2C_Master>.
+    Set user-defined property "INIT =  D" for instance <NACK_and000020_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1000" for instance <NACK_and000022> in unit <I2C_Master>.
+    Set user-defined property "INIT =  A8FF" for instance <i_FIFO_DoPop_SW3_G> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F1FF" for instance <i_FIFO_DoPop_SW4_G> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6A" for instance <i_FIFO_Result_2_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6A" for instance <i_FIFO_Result_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1000" for instance <SCLout_mux000063> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8F88" for instance <state_FSM_FFd5_In1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B313" for instance <Mcount_cntBytes_xor_0_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_7_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_6_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_5_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_4_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_3_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_1_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_0_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C9" for instance <Mcount_cntBytes_xor_2_1_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <Mcount_cntBytes_xor_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  AAA9" for instance <Mcount_cntBytes_xor_3_1_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <Mcount_cntBytes_xor_3_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_7_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_7_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_6_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_6_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_5_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_5_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_4_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_4_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_3_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_3_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_2_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_1_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_1_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFE" for instance <Mcount_cntBytes_xor_3_111> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0001" for instance <SDAout_mux0003412> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0001" for instance <SDAout_mux0003425> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B" for instance <SDAout_mux000337> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8" for instance <SDAout_mux000388> in unit <I2C_Master>.
+    Set user-defined property "INIT =  7" for instance <SDAout_mux0003107> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F1" for instance <state_FSM_FFd3_In_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C404" for instance <sregOut_not0001_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  08" for instance <SDAout_mux000332> in unit <I2C_Master>.
+    Set user-defined property "INIT =  4000" for instance <NACK_and000011> in unit <I2C_Master>.
+    Set user-defined property "INIT =  D" for instance <i_FIFO_DoPop_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FF7F" for instance <i_FIFO_DoPush13_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1000" for instance <SDAout_mux000358> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C4" for instance <i_FIFO_DoPush0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFD" for instance <i_FIFO_DoPop_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFE" for instance <SDAout_mux0003157> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0990" for instance <i_FIFO_iEmpty_and0000102_SW0> in unit <I2C_Master>.
+Entity <I2C_Master> analyzed. Unit <I2C_Master> generated.
+
+Analyzing Entity <Magneto_Comp> in library <work> (Architecture <behavioral>).
+Entity <Magneto_Comp> analyzed. Unit <Magneto_Comp> generated.
+
+Analyzing Entity <CB16RE_MXILINX_magneto_v1> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  I_Q0_15" for instance <I_Q0> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q1_14" for instance <I_Q1> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q2_13" for instance <I_Q2> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q3_12" for instance <I_Q3> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q4_11" for instance <I_Q4> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q5_10" for instance <I_Q5> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q6_9" for instance <I_Q6> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q7_8" for instance <I_Q7> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q8_0" for instance <I_Q8> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q9_1" for instance <I_Q9> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q10_2" for instance <I_Q10> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q11_3" for instance <I_Q11> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q12_4" for instance <I_Q12> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q13_5" for instance <I_Q13> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q14_6" for instance <I_Q14> in unit <CB16RE_MXILINX_magneto_v1>.
+    Set user-defined property "HU_SET =  I_Q15_7" for instance <I_Q15> in unit <CB16RE_MXILINX_magneto_v1>.
+Entity <CB16RE_MXILINX_magneto_v1> analyzed. Unit <CB16RE_MXILINX_magneto_v1> generated.
+
+Analyzing generic Entity <FTRSE_MXILINX_magneto_v1> in library <work> (Architecture <behavioral>).
+	INIT = '0'
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_magneto_v1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_magneto_v1>.
+Entity <FTRSE_MXILINX_magneto_v1> analyzed. Unit <FTRSE_MXILINX_magneto_v1> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Magneto_Comp>.
+    Related source file is "C:/Users/lab/Magnetometr-v1/Magneto_Comp.vhd".
+WARNING:Xst:647 - Input <I2C_FIFO_Full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 28                                             |
+    | Transitions        | 37                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 33                                             |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit register for signal <bytes>.
+    Found 3-bit adder for signal <bytes$share0000>.
+    Found 1-bit register for signal <DRDY_in>.
+    Found 16-bit register for signal <DRX_reg>.
+    Found 16-bit register for signal <DRY_reg>.
+    Found 16-bit register for signal <DRZ_reg>.
+    Found 24-bit register for signal <ID_reg>.
+    Found 48-bit register for signal <Input>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 124 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Magneto_Comp> synthesized.
+
+
+Synthesizing Unit <I2C_Master>.
+    Related source file is "C:/Users/lab/Magnetometr-v1/I2C_Master.vhd".
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM8_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM7_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM6_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM5_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM4_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM3_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM2_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM1_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_IOB2_O_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <I2C_Master> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_magneto_v1>.
+    Related source file is "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf".
+Unit <FTRSE_MXILINX_magneto_v1> synthesized.
+
+
+Synthesizing Unit <MagnetoHMC5883L_MUSER_magneto_v1>.
+    Related source file is "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf".
+Unit <MagnetoHMC5883L_MUSER_magneto_v1> synthesized.
+
+
+Synthesizing Unit <CB16RE_MXILINX_magneto_v1>.
+    Related source file is "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf".
+Unit <CB16RE_MXILINX_magneto_v1> synthesized.
+
+
+Synthesizing Unit <magneto_v1>.
+    Related source file is "C:/Users/lab/Magnetometr-v1/magneto_v1.vhf".
+WARNING:Xst:653 - Signal <XLXN_318<63:16>> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000000000000000000000000000.
+WARNING:Xst:653 - Signal <XLXN_308<63:52>> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:653 - Signal <XLXN_308<35:34>> is used but never assigned. This sourceless signal will be automatically connected to value 00.
+WARNING:Xst:653 - Signal <XLXN_308<17:16>> is used but never assigned. This sourceless signal will be automatically connected to value 00.
+Unit <magneto_v1> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 77
+ 1-bit register                                        : 73
+ 16-bit register                                       : 3
+ 3-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_22/XLXI_1/state/FSM> on signal <state[1:28]> with one-hot encoding.
+-------------------------------------------------
+ State           | Encoding
+-------------------------------------------------
+ init            | 0000000000000000000000000001
+ pushaddrid      | 0000000000000000000000000010
+ sendaddrid      | 0000000000000000000000000100
+ busyaddrid      | 0000000000000000000000001000
+ receiveid       | 0000000000000000000000010000
+ busyid          | 0000000000000000000000100000
+ readid          | 0000000000000000000001000000
+ popid           | 0000000000000000000010000000
+ checkid         | 0000000000000000000100000000
+ pushaddrconfiga | 0000000000000000001000000000
+ pushdataconfiga | 0000000000000000010000000000
+ sendconfiga     | 0000000000000000100000000000
+ busyconfiga     | 0000000000000001000000000000
+ pushaddrmode    | 0000000000000010000000000000
+ pushdatamode    | 0000000000000100000000000000
+ sendmode        | 0000000000001000000000000000
+ busymode        | 0000000000010000000000000000
+ measurewait     | 0000000000100000000000000000
+ measurereceive  | 0000000001000000000000000000
+ measurebusy     | 0000000010000000000000000000
+ measureread     | 0000000100000000000000000000
+ measurepop      | 0000001000000000000000000000
+ measurecheck    | 0000010000000000000000000000
+ measureload     | 0000100000000000000000000000
+ measureoutput   | 0001000000000000000000000000
+ measurepushaddr | 0010000000000000000000000000
+ measuresendaddr | 0100000000000000000000000000
+ measurebusyaddr | 1000000000000000000000000000
+-------------------------------------------------
+Reading core <LCD2x64.ngc>.
+Loading core <LCD2x64> for timing and area information for instance <XLXI_21>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 192
+ Flip-Flops                                            : 192
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <magneto_v1> ...
+
+Optimizing unit <Magneto_Comp> ...
+
+Optimizing unit <I2C_Master> ...
+
+Optimizing unit <FTRSE_MXILINX_magneto_v1> ...
+
+Optimizing unit <CB16RE_MXILINX_magneto_v1> ...
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_19> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_18> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_23> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_22> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_16> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_17> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_21> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_15> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_14> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_13> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_20> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_12> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_11> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_9> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_10> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_8> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_7> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_5> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_4> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_6> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_3> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_2> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_1> of sequential type is unconnected in block <magneto_v1>.
+WARNING:Xst:2677 - Node <XLXI_22/XLXI_1/ID_reg_0> of sequential type is unconnected in block <magneto_v1>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block magneto_v1, actual ratio is 6.
+INFO:Xst:2260 - The FF/Latch <XLXI_22/XLXI_1/state_FSM_FFd28> in Unit <magneto_v1> is equivalent to the following FF/Latch : <XLXI_22/I2C_Connection/state_FSM_FFd6> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_21> is equivalent to the following 4 FFs/Latches : <State_16_1> <State_16_2> <State_16_3> <State_16_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_21> is equivalent to the following FF/Latch : <cntDigit_0_1> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_21> is equivalent to the following FF/Latch : <cntDigit_1_1> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_21> is equivalent to the following 4 FFs/Latches : <State_16_1> <State_16_2> <State_16_3> <State_16_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_21> is equivalent to the following FF/Latch : <cntDigit_0_1> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_21> is equivalent to the following FF/Latch : <cntDigit_1_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 196
+ Flip-Flops                                            : 196
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : magneto_v1.ngr
+Top Level Output File Name         : magneto_v1
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 632
+#      AND2                        : 5
+#      AND3                        : 4
+#      AND4                        : 4
+#      AND5                        : 3
+#      BUF                         : 1
+#      GND                         : 3
+#      INV                         : 11
+#      LUT1                        : 33
+#      LUT2                        : 63
+#      LUT2_D                      : 1
+#      LUT2_L                      : 8
+#      LUT3                        : 153
+#      LUT3_D                      : 3
+#      LUT3_L                      : 8
+#      LUT4                        : 134
+#      LUT4_D                      : 11
+#      LUT4_L                      : 13
+#      MUXCY                       : 33
+#      MUXF5                       : 37
+#      MUXF6                       : 12
+#      MUXF7                       : 6
+#      OR2                         : 32
+#      VCC                         : 3
+#      XOR2                        : 16
+#      XORCY                       : 35
+# FlipFlops/Latches                : 290
+#      FD                          : 3
+#      FDC                         : 1
+#      FDE                         : 124
+#      FDR                         : 90
+#      FDRE                        : 36
+#      FDRS                        : 18
+#      FDRSE                       : 3
+#      FDS                         : 15
+# RAMS                             : 8
+#      RAM16X1D                    : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 5
+#      IOBUF                       : 6
+#      OBUF                        : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      317  out of   4656     6%  
+ Number of Slice Flip Flops:            290  out of   9312     3%  
+ Number of 4 input LUTs:                454  out of   9312     4%  
+    Number used as logic:               438
+    Number used as RAMs:                 16
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 298   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Reset                              | IBUF                   | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.951ns (Maximum Frequency: 111.719MHz)
+   Minimum input arrival time before clock: 5.903ns
+   Maximum output required time after clock: 6.080ns
+   Maximum combinational path delay: 6.061ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 8.951ns (frequency: 111.719MHz)
+  Total number of paths / destination ports: 5277 / 601
+-------------------------------------------------------------------------
+Delay:               8.951ns (Levels of Logic = 7)
+  Source:            XLXI_23/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_23/I_Q15/I_36_35 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_23/I_Q0/I_36_35 to XLXI_23/I_Q15/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.591   0.669  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.704   0.633  I_36_32 (T4)
+     AND5:I4->O            5   0.704   0.633  I_36_31 (T8)
+     AND5:I4->O            5   0.704   0.633  I_36_20 (T12)
+     AND4:I3->O            1   0.704   0.420  I_36_24 (T15)
+     begin scope: 'I_Q15'
+     XOR2:I0->O            1   0.704   0.420  I_36_32 (TQ)
+     OR2:I1->O             1   0.704   0.420  I_36_73 (D_S)
+     FDRE:D                    0.308          I_36_35
+    ----------------------------------------
+    Total                      8.951ns (5.123ns logic, 3.828ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 70 / 69
+-------------------------------------------------------------------------
+Offset:              5.903ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       XLXI_22/I2C_Connection/i_FIFO_iEmpty (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Reset to XLXI_22/I2C_Connection/i_FIFO_iEmpty
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   1.218   1.351  Reset_IBUF (Reset_IBUF)
+     LUT2:I1->O            1   0.704   0.595  XLXI_22/I2C_Connection/i_FIFO_DoPush40_SW1 (XLXI_22/I2C_Connection/N80)
+     LUT4:I0->O            1   0.704   0.420  XLXI_22/I2C_Connection/i_FIFO_iEmpty_or00001 (XLXI_22/I2C_Connection/i_FIFO_iEmpty_or0000)
+     FDRE:R                    0.911          XLXI_22/I2C_Connection/i_FIFO_iEmpty
+    ----------------------------------------
+    Total                      5.903ns (3.537ns logic, 2.366ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 29 / 10
+-------------------------------------------------------------------------
+Offset:              6.080ns (Levels of Logic = 3)
+  Source:            XLXI_21/State_20 (FF)
+  Destination:       LCD_RW (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_21/State_20 to LCD_RW
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             6   0.591   0.844  State_20 (State<20>)
+     LUT2:I0->O            6   0.704   0.669  T_or00001 (LCD_RW)
+     end scope: 'XLXI_21'
+     OBUF:I->O                 3.272          LCD_RW_OBUF (LCD_RW)
+    ----------------------------------------
+    Total                      6.080ns (4.567ns logic, 1.513ns route)
+                                       (75.1% logic, 24.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.061ns (Levels of Logic = 3)
+  Source:            DRDY (PAD)
+  Destination:       DRLED (PAD)
+
+  Data Path: DRDY to DRLED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.447  DRDY_IBUF (DRDY_IBUF)
+     BUF:I->O              1   0.704   0.420  XLXI_19 (DRLED_OBUF)
+     OBUF:I->O                 3.272          DRLED_OBUF (DRLED)
+    ----------------------------------------
+    Total                      6.061ns (5.194ns logic, 0.867ns route)
+                                       (85.7% logic, 14.3% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to XLXI_22/I2C_Connection/IOB2.
+WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to XLXI_22/I2C_Connection/IOB1.
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.54 secs
+ 
+--> 
+
+Total memory usage is 222804 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

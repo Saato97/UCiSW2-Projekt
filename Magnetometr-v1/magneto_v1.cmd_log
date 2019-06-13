@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "C:/Users/lab/Magnetometr-v1/magneto_v1.xst" -ofn "C:/Users/lab/Magnetometr-v1/magneto_v1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Magneto_J4.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 magneto_v1.ngc magneto_v1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o magneto_v1_map.ncd magneto_v1.ngd magneto_v1.pcf 
+xst -intstyle ise -ifn "C:/Users/lab/Magnetometr-v1/magneto_v1.xst" -ofn "C:/Users/lab/Magnetometr-v1/magneto_v1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Magneto_J4.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 magneto_v1.ngc magneto_v1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o magneto_v1_map.ncd magneto_v1.ngd magneto_v1.pcf 
+par -w -intstyle ise -ol high -t 1 magneto_v1_map.ncd magneto_v1.ncd magneto_v1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml magneto_v1.twx magneto_v1.ncd -o magneto_v1.twr magneto_v1.pcf -ucf Magneto_J4.ucf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f magneto_v1.ut magneto_v1.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Magnetometr-v1/magneto_v1.xst" -ofn "C:/Users/lab/Magnetometr-v1/magneto_v1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Magneto_J4.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 magneto_v1.ngc magneto_v1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o magneto_v1_map.ncd magneto_v1.ngd magneto_v1.pcf 
+par -w -intstyle ise -ol high -t 1 magneto_v1_map.ncd magneto_v1.ncd magneto_v1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml magneto_v1.twx magneto_v1.ncd -o magneto_v1.twr magneto_v1.pcf -ucf Magneto_J4.ucf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f magneto_v1.ut magneto_v1.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Magnetometr-v1/magneto_v1.xst" -ofn "C:/Users/lab/Magnetometr-v1/magneto_v1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Magneto_J4.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 magneto_v1.ngc magneto_v1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o magneto_v1_map.ncd magneto_v1.ngd magneto_v1.pcf 
+par -w -intstyle ise -ol high -t 1 magneto_v1_map.ncd magneto_v1.ncd magneto_v1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml magneto_v1.twx magneto_v1.ncd -o magneto_v1.twr magneto_v1.pcf -ucf Magneto_J4.ucf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f magneto_v1.ut magneto_v1.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Magnetometr-v1/magneto_v1.xst" -ofn "C:/Users/lab/Magnetometr-v1/magneto_v1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Magneto_J4.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 magneto_v1.ngc magneto_v1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o magneto_v1_map.ncd magneto_v1.ngd magneto_v1.pcf 
+par -w -intstyle ise -ol high -t 1 magneto_v1_map.ncd magneto_v1.ncd magneto_v1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml magneto_v1.twx magneto_v1.ncd -o magneto_v1.twr magneto_v1.pcf -ucf Magneto_J4.ucf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f magneto_v1.ut magneto_v1.ncd 
